@@ -22,5 +22,7 @@ Kaskus Emoticons is emoticons used in kaskus forum. Kaskus it self is the larges
 
 == Changelog ==
 
+= 1.0.1 =
+ * change description.
 = 1.0 =
  * New plugin published.
