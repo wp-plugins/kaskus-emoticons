@@ -2,7 +2,7 @@
 /*
 Plugin Name: Kaskus Emoticons
 Plugin URI: http://nartzco.com/blog/2009/10/23/kaskus-emoticons/
-Description: Kaskus Emoticons are often use in the Kaskus forum. <a href="http://kaskus.us">Kaskus</a> is The Largest <strong>Indonesian</strong> Community
+Description: Kaskus Emoticons is emoticons used in kaskus forum. Kaskus it self is the largest Indonesian community that has millions members and posts. Some images here are copyrighted by Kaskus.
 Version: 1.0
 Author: Rehybrid
 Author URI: http://nartzco.com/

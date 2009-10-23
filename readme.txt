@@ -6,11 +6,10 @@ Requires at least: 2.7.1
 Tested up to: 2.8.5
 
 
-Kaskus Emoticons are often use in the Kaskus forum. Kaskus is The Largest Indonesian Community
+Kaskus Emoticons is emoticons used in kaskus forum. Kaskus it self is the largest Indonesian community that has millions members and posts. Some images here are copyrighted by Kaskus.
 
 == Description ==
-
-Kaskus Emoticons are often use in the Kaskus forum. Kaskus is The Largest Indonesian Community
+Kaskus Emoticons is emoticons used in kaskus forum. Kaskus it self is the largest Indonesian community that has millions members and posts. Some images here are copyrighted by Kaskus.
 
 == Installation ==
 
