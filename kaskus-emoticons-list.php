@@ -1,6 +1,8 @@
 <?php
 $KEEUrl 	= get_option('siteurl') . '/wp-content/plugins/kaskus-emoticons/emoticons/';
 $KEReplace	= array(
+	':takut' => '<img src="'. $KEEUrl.'takut.gif" style="border:none;background:none;" alt=":takut" />',
+	':recsel' => '<img src="'. $KEEUrl.'recseller.gif" style="border:none;background:none;" alt=":recsel" />',
 	':ilovekaskus' => '<img src="'. $KEEUrl.'s_sm_ilovekaskus.gif" style="border:none;background:none;" alt=":ilovekaskus" />',
 	':iloveindonesia' => '<img src="'. $KEEUrl.'I-Luv-Indonesia.gif" style="border:none;background:none;" alt=":iloveindonesia" />',
 	':kiss' => '<img src="'. $KEEUrl.'cewek.gif" style="border:none;background:none;" alt=":kiss" />',
