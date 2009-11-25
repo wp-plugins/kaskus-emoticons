@@ -4,7 +4,7 @@ Donate link:
 Tags: kaskus,emoticons,comments,posts,smileys,smilies 
 Requires at least: 2.7.1
 Tested up to: 2.8.5
-Stable tag: 2.0
+Stable tag: 2.1
 
 Kaskus Emoticons is an emoticon set inspired by Kaskus
 == Description ==
@@ -19,6 +19,8 @@ Kaskus Emoticons is an emoticon set inspired by Kaskus, the Largest Indonesian C
 1. List Emoticon
 
 == Changelog ==
+= 2.1 =
+ * added two emoticon
 = 2.0 =
  * added shortcut in the comment form
  * added two emoticon
