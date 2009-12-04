@@ -3,11 +3,11 @@
 Plugin Name: Kaskus Emoticons
 Plugin URI: http://nartzco.com/blog/2009/10/23/kaskus-emoticons/
 Description: Kaskus Emoticons is an emoticon set inspired by Kaskus, the Largest Indonesian Community - consisting of over a million active members from all over the world. The images which are used in this plugin are copyright of Kaskus
-Version: 2.0
+Version: 2.2
 Author: Rehybrid
 Author URI: http://nartzco.com/
 
-Copyright 2009, Rehybrid
+Copyright 2009, nartzco.com
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -100,7 +100,30 @@ if(!class_exists('KaskusEmoticons')){
 <?php
 		}
 
-		function replace($content){
+		function replace($string){
+			//die($string);
+			$output = '';
+			$textarr = preg_split("/(<\/?pre[^>]*>)|(<\/?p[^>]*>)|(<\/?a[^>]*>)|(<\/?object[^>]*>)|(<\/?img[^>]*>)|(<\/?embed[^>]*>)|(<\/?strong[^>]*>)|(<\/?b[^>]*>)|(<\/?i[^>]*>)|(<\/?em[^>]*>)/U", $string, -1, PREG_SPLIT_DELIM_CAPTURE); 
+			$stop = count($textarr);
+			//die(print_r($textarr,true));
+			$s=false;
+			for ($i = 0; $i < $stop; $i++){
+				$content = $textarr[$i];
+				if(preg_match("/^<pre/",trim($content)))$s = true;
+				if(trim($content)=="^</pre>")$s = false;
+				//if (!$s && (strlen($content) > 0) && ('<' != $content{0}))
+				if (!$s)
+				{ 
+					$content = KaskusEmoticons::replace_code( $content ) ;
+				}
+				$output .= $content;
+			}
+			
+			return $output;
+			
+		}
+
+		function replace_code($content){
 			global $KEReplace;
 			//print_r($content);die;
 			return strtr($content,$KEReplace);
@@ -109,14 +132,14 @@ if(!class_exists('KaskusEmoticons')){
 		function scut(){
 			global $KEReplace;
 			$opt = get_option('kaskus_emoticons');
-			echo "<div id='kaskusemoticonslink' style=\"cursor:pointer\" onclick=\"kaskusemoticonsclink()\">[+] kaskus emoticons</div>";
+			echo "<div id='kaskusemoticonslink' style=\"cursor:pointer;margin:2px\" onclick=\"kaskusemoticonsclink()\">[+] kaskus emoticons</div>";
 			echo "<div id='kaskusemoticonscontent' style=\"display:none\">";
 			foreach($KEReplace as $k=>$v){
 				echo "<a title=\"".$k."\" href=\"javascript:kaskusemoticonsclick('".$k."')\" style=\"cursor:pointer;margin:1px;border:none\">".$v."</a>";
 			}
-			if(isset($opt['backlink']) && $opt['backlink']) echo "<br>Kaskus Emoticons by <a rel=\"follow\" href=\"http://nartzco.com\">nartzco.com</a>";
+			if(isset($opt['backlink']) && $opt['backlink']) echo "<br><a rel=\"follow\" href=\"http://nartzco.com\"><img src=\"http://nartzco.com/blog/wp-content/themes/my/images/bl.png\" alt=\"BY NARTZCO.COM\"></a>";
 			else {
-				if(!isset($opt['backlink'])) echo "<br>Kaskus Emoticons by <a rel=\"follow\" href=\"http://nartzco.com\">nartzco.com</a>";
+				if(!isset($opt['backlink']))  echo "<br><a rel=\"follow\" href=\"http://nartzco.com\"><img src=\"http://nartzco.com/blog/wp-content/themes/my/images/bl.png\" alt=\"BY NARTZCO.COM\"></a>";
 			}
 			echo "</div>"; 
 		}
@@ -129,7 +152,9 @@ if(!class_exists('KaskusEmoticons')){
 	};
 	
 	var kaskusemoticonsclick = function(tag){
-		gOI("comment").value = gOI("comment").value + " " + tag;
+		var d = gOI("comment");
+		var b = d.selectionStart, a = d.selectionEnd;
+		d.value = d.value.substring(0, b) + " " + tag + " " + d.value.substring(a, d.value.length);
 	};
 	
 	var kaskusemoticonsclink = function(){
