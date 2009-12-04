@@ -19,6 +19,8 @@ Kaskus Emoticons is an emoticon set inspired by Kaskus, the Largest Indonesian C
 1. List Emoticon
 
 == Changelog ==
+= 2.2.1 =
+ * support 2.8.6
 = 2.2 =
  * bug fixing in SyntaxHighlighter plugin
  * insert emoticon at cursor
