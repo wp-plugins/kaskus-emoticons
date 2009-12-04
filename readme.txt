@@ -3,7 +3,7 @@ Contributors: rehybrid
 Donate link: http://nartzco.com
 Tags: kaskus,emoticon,comment,post,smiley,emoticons,comments,posts,smileys,smilies 
 Requires at least: 2.7.1
-Tested up to: 2.8.5
+Tested up to: 2.8.6
 Stable tag: 2.2
 
 Kaskus Emoticons is an emoticon set inspired by Kaskus, the Largest Indonesian Community
