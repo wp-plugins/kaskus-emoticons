@@ -2,7 +2,7 @@
 $KEEUrl 	= get_option('siteurl') . '/wp-content/plugins/kaskus-emoticons/emoticons/';
 $KEReplace	= array(
 	':shakehand2' => '<img src="'. $KEEUrl.'shakehand2.gif" style="border:none;background:none;" alt=":shakehand2" />',
-	':ngacir2' => '<img src="'. $KEEUrl.'ngacir2.gif" style="border:none;background:none;" alt=":ngaci2r" />',
+	':ngacir2' => '<img src="'. $KEEUrl.'ngacir2.gif" style="border:none;background:none;" alt=":ngacir2" />',
 	':takut' => '<img src="'. $KEEUrl.'takut.gif" style="border:none;background:none;" alt=":takut" />',
 	':recsel' => '<img src="'. $KEEUrl.'recseller.gif" style="border:none;background:none;" alt=":recsel" />',
 	':ilovekaskus' => '<img src="'. $KEEUrl.'s_sm_ilovekaskus.gif" style="border:none;background:none;" alt=":ilovekaskus" />',
