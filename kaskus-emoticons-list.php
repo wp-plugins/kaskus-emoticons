@@ -1,6 +1,22 @@
 <?php
 $KEEUrl 	= get_option('siteurl') . '/wp-content/plugins/kaskus-emoticons/emoticons/';
 $KEReplace	= array(
+	':alay' => '<img src="'. $KEEUrl.'tambahan-kaskuser/alay.gif" style="border:none;background:none;" alt=":alay" />',
+	':hoax' => '<img src="'. $KEEUrl.'tambahan-kaskuser/hoax.gif" style="border:none;background:none;" alt=":hoax" />',
+	':hope' => '<img src="'. $KEEUrl.'tambahan-kaskuser/hope.gif" style="border:none;background:none;" alt=":hope" />',
+	':hotrit' => '<img src="'. $KEEUrl.'tambahan-kaskuser/hotrit.gif" style="border:none;background:none;" alt=":hotrit" />',
+	':lapar' => '<img src="'. $KEEUrl.'tambahan-kaskuser/lapar.gif" style="border:none;background:none;" alt=":lapar" />',
+	':mahongintip' => '<img src="'. $KEEUrl.'tambahan-kaskuser/mahongintip.gif" style="border:none;background:none;" alt=":mahongintip" />',
+	':mewek' => '<img src="'. $KEEUrl.'tambahan-kaskuser/mewek.gif" style="border:none;background:none;" alt=":mewek" />',
+	':nerd' => '<img src="'. $KEEUrl.'tambahan-kaskuser/nerd.gif" style="border:none;background:none;" alt=":nerd" />',
+	':pertamax' => '<img src="'. $KEEUrl.'tambahan-kaskuser/pertamax.gif" style="border:none;background:none;" alt=":pertamax" />',
+	':rate' => '<img src="'. $KEEUrl.'tambahan-kaskuser/rate.gif" style="border:none;background:none;" alt=":rate" />',
+	':sungkem' => '<img src="'. $KEEUrl.'tambahan-kaskuser/sungkem.gif" style="border:none;background:none;" alt=":sungkem" />',
+	':supermaho' => '<img src="'. $KEEUrl.'tambahan-kaskuser/supermaho.gif" style="border:none;background:none;" alt=":supermaho" />',
+	':thanks2' => '<img src="'. $KEEUrl.'tambahan-kaskuser/thanks2.gif" style="border:none;background:none;" alt=":thanks2" />',
+	':tkp' => '<img src="'. $KEEUrl.'tambahan-kaskuser/tkp.gif" style="border:none;background:none;" alt=":tkp" />',
+
+
 	':shakehand2' => '<img src="'. $KEEUrl.'shakehand2.gif" style="border:none;background:none;" alt=":shakehand2" />',
 	':ngacir2' => '<img src="'. $KEEUrl.'ngacir2.gif" style="border:none;background:none;" alt=":ngacir2" />',
 	':takut' => '<img src="'. $KEEUrl.'takut.gif" style="border:none;background:none;" alt=":takut" />',
