@@ -3,7 +3,7 @@
 Plugin Name: Kaskus Emoticons
 Plugin URI: http://nartzco.com/blog/2009/10/23/kaskus-emoticons/
 Description: Kaskus Emoticons is an emoticon set inspired by Kaskus, the Largest Indonesian Community - consisting of over a million active members from all over the world. The images which are used in this plugin are copyright of Kaskus
-Version: 2.2
+Version: 2.4
 Author: Rehybrid
 Author URI: http://nartzco.com/
 
@@ -137,9 +137,9 @@ if(!class_exists('KaskusEmoticons')){
 			foreach($KEReplace as $k=>$v){
 				echo "<a title=\"".$k."\" href=\"javascript:kaskusemoticonsclick('".$k."')\" style=\"cursor:pointer;margin:1px;border:none\">".$v."</a>";
 			}
-			if(isset($opt['backlink']) && $opt['backlink']) echo "<br><a rel=\"follow\" href=\"http://nartzco.com\"><img src=\"http://nartzco.com/blog/wp-content/themes/my/images/bl.png\" alt=\"BY NARTZCO.COM\"></a>";
+			if(isset($opt['backlink']) && $opt['backlink']) echo "<br><a rel=\"follow\" href=\"http://nartzco.com\"><img src=\"http://nartzco.com/blog/wp-content/themes/my/images/bl.png\" alt=\"BY NARTZCO.COM\" border=\"0\"></a>";
 			else {
-				if(!isset($opt['backlink']))  echo "<br><a rel=\"follow\" href=\"http://nartzco.com\"><img src=\"http://nartzco.com/blog/wp-content/themes/my/images/bl.png\" alt=\"BY NARTZCO.COM\"></a>";
+				if(!isset($opt['backlink']))  echo "<br><a rel=\"follow\" href=\"http://nartzco.com\"><img src=\"http://nartzco.com/blog/wp-content/themes/my/images/bl.png\" alt=\"BY NARTZCO.COM\" border=\"0\"></a>";
 			}
 			echo "</div>"; 
 		}
@@ -154,6 +154,7 @@ if(!class_exists('KaskusEmoticons')){
 	var kaskusemoticonsclick = function(tag){
 		var d = gOI("comment");
 		var b = d.selectionStart, a = d.selectionEnd;
+		//d.value = d.value.substring(0, b) + " " + tag + " " + d.value.substring(a, d.value.length);
 		d.value = d.value.substring(0, b) + " " + tag + " " + d.value.substring(a, d.value.length);
 	};
 	
