@@ -1,6 +1,9 @@
 <?php
 $KEEUrl 	= get_option('siteurl') . '/wp-content/plugins/kaskus-emoticons/emoticons/';
 $KEReplace	= array(
+	':malu2' => '<img src="'. $KEEUrl.'tambahan-kaskuser/malu2.gif" style="border:none;background:none;" alt=":malu2" />',
+	':siul' => '<img src="'. $KEEUrl.'tambahan-kaskuser/siul.gif" style="border:none;background:none;" alt=":siul" />',
+	':newyear' => '<img src="'. $KEEUrl.'tambahan-kaskuser/newyear.gif" style="border:none;background:none;" alt=":newyear" />',
 	':alay' => '<img src="'. $KEEUrl.'tambahan-kaskuser/alay.gif" style="border:none;background:none;" alt=":alay" />',
 	':hoax' => '<img src="'. $KEEUrl.'tambahan-kaskuser/hoax.gif" style="border:none;background:none;" alt=":hoax" />',
 	':hope' => '<img src="'. $KEEUrl.'tambahan-kaskuser/hope.gif" style="border:none;background:none;" alt=":hope" />',
@@ -17,6 +20,8 @@ $KEReplace	= array(
 	':tkp' => '<img src="'. $KEEUrl.'tambahan-kaskuser/tkp.gif" style="border:none;background:none;" alt=":tkp" />',
 
 
+	':cekpm' => '<img src="'. $KEEUrl.'cekpm.gif" style="border:none;background:none;" alt=":cekpm" />',
+	':bingung' => '<img src="'. $KEEUrl.'bingung.gif" style="border:none;background:none;" alt=":bingung" />',
 	':shakehand2' => '<img src="'. $KEEUrl.'shakehand2.gif" style="border:none;background:none;" alt=":shakehand2" />',
 	':ngacir2' => '<img src="'. $KEEUrl.'ngacir2.gif" style="border:none;background:none;" alt=":ngacir2" />',
 	':takut' => '<img src="'. $KEEUrl.'takut.gif" style="border:none;background:none;" alt=":takut" />',
