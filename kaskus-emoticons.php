@@ -69,7 +69,7 @@ if(!class_exists('KaskusEmoticons')){
 
 		function control() {
 			//die(print_r($_POST,true));
-			global $KEEUrl,$KEReplace;
+			global $KEEUrl,$KEReplace2;
 			$options = $newoptions = get_option('kaskus_emoticons');
 			//die(print_r($options,true));
 			if($_POST["kaskus_emoticons_action"]) {
@@ -124,7 +124,7 @@ if(!class_exists('KaskusEmoticons')){
 						<td align="center"><strong>Image</strong></td>
 						<td align="center"><strong>Code</strong></td>
 					</tr>
-					<?php foreach($KEReplace as $k=>$v):?>
+					<?php foreach($KEReplace2 as $k=>$v):?>
 					<tr>
 						<td align="center"><input <?php echo (isset($options['stat']) && isset($options['stat'][$k]) ? "checked=\"checked\"":"");?> name="kaskus_emoticons_stat[<?php echo $k;?>]" type="checkbox"></td>
 						<td align="center"><?php echo $v;?></td>

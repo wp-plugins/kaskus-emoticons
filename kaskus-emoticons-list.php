@@ -139,6 +139,7 @@ $KEReplace	= array(
 	':shakehand' => '<img src="'. $KEEUrl.'49.gif" style="border:none;background:none;" alt=":shakehand" />',
 	':bingung:' => '<img src="'. $KEEUrl.'bolakbalik.gif" style="border:none;background:none;" alt=":bingung:" />'         
 );
+$KEReplace2 = $KEReplace;
 foreach($opt['stat'] as $k=>$v){
 	$KEReplace[$k]="";
 }
