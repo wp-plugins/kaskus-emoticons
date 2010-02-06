@@ -140,7 +140,7 @@ $KEReplace	= array(
 	':bingung:' => '<img src="'. $KEEUrl.'bolakbalik.gif" style="border:none;background:none;" alt=":bingung:" />'         
 );
 $KEReplace2 = $KEReplace;
-if(isset($opt['stat']){
+if(isset($opt['stat'])){
 	foreach($opt['stat'] as $k=>$v){
 		$KEReplace[$k]="";
 	}
