@@ -1,5 +1,7 @@
 <?php
-$KEEUrl 	= get_option('siteurl') . '/wp-content/plugins/kaskus-emoticons/emoticons/';
+$KEEUrl = get_option('siteurl') . '/wp-content/plugins/kaskus-emoticons/emoticons/';
+$opt 	= get_option('kaskus_emoticons');
+
 $KEReplace	= array(
 	':cendol' => '<img src="'. $KEEUrl.'tambahan-kaskuser/cendol.gif" style="border:none;background:none;" alt=":cendol" />',
 
@@ -137,4 +139,7 @@ $KEReplace	= array(
 	':shakehand' => '<img src="'. $KEEUrl.'49.gif" style="border:none;background:none;" alt=":shakehand" />',
 	':bingung:' => '<img src="'. $KEEUrl.'bolakbalik.gif" style="border:none;background:none;" alt=":bingung:" />'         
 );
+foreach($opt['stat'] as $k=>$v){
+	$KEReplace[$k]="";
+}
 ?>

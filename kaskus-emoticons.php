@@ -3,7 +3,7 @@
 Plugin Name: Kaskus Emoticons
 Plugin URI: http://nartzco.com/blog/2009/10/23/kaskus-emoticons/
 Description: Kaskus Emoticons is an emoticon set inspired by Kaskus, the Largest Indonesian Community - consisting of over a million active members from all over the world. The images which are used in this plugin are copyright of Kaskus
-Version: 2.5
+Version: 3.0
 Author: Rehybrid
 Author URI: http://nartzco.com/
 
@@ -31,6 +31,8 @@ add_action('comment_form', array('KaskusEmoticons', 'scut'));
 add_action('wp_head', array('KaskusEmoticons', 'script'));
 add_action('admin_menu', array('KaskusEmoticons','menu'));
 add_filter( 'plugin_action_links', array('KaskusEmoticons', 'link'), 10, 2 );
+add_action('media_buttons', array('KaskusEmoticons', 'add_button'), 30);
+
 require_once("kaskus-emoticons-list.php");
 
 if(!class_exists('KaskusEmoticons')){
@@ -144,7 +146,7 @@ if(!class_exists('KaskusEmoticons')){
 			$output = '';
 			$textarr = preg_split("/(<\/?pre[^>]*>)|(<\/?p[^>]*>)|(<\/?a[^>]*>)|(<\/?object[^>]*>)|(<\/?img[^>]*>)|(<\/?embed[^>]*>)|(<\/?strong[^>]*>)|(<\/?b[^>]*>)|(<\/?i[^>]*>)|(<\/?em[^>]*>)/U", $string, -1, PREG_SPLIT_DELIM_CAPTURE); 
 			$stop = count($textarr);
-			//die(print_r($textarr,true));
+			//die(print_r($opt['stat'],true));
 			$s=false;
 			for ($i = 0; $i < $stop; $i++){
 				$content = $textarr[$i];
@@ -172,18 +174,28 @@ if(!class_exists('KaskusEmoticons')){
 			return strtr($content,$KEReplace);
 		}
 		
+		function add_button(){
+			$pl_dir 	= get_option('siteurl') . '/wp-content/plugins/kaskus-emoticons/';
+	        $wizard_url = $pl_dir . 'kaskus_emoticons_wizard.php';
+	        $button_src = $pl_dir.'kaskus.jpg';
+	        $button_tip = 'Insert a Kaskus Emoticon';
+	        $pl_dir		= ABSPATH . 'wp-content/plugins/kaskus-emoticons/';
+	        echo '<a title="Add a Kaskus Emoticon" href="'.$wizard_url.'?pl_dir='.$pl_dir.'&KeepThis=true&TB_iframe=true" class="thickbox" ><img src="' . $button_src . '" alt="' . $button_tip . '" /></a>';
+		}
+		
 		function scut(){
 			global $KEReplace;
 			$opt = get_option('kaskus_emoticons');
-			echo "<div id='kaskusemoticonslink' style=\"cursor:pointer;margin:2px\" onclick=\"kaskusemoticonsclink()\">[+] kaskus emoticons</div>";
+			echo "<div style=\"cursor:pointer;margin:2px\" onclick=\"kaskusemoticonsclink()\"><span id='kaskusemoticonslink'>[+] kaskus emoticons</span>";
+			if(isset($opt['backlink']) && $opt['backlink']) echo "&nbsp;<a target=\"_blank\" href=\"http://nartzco.com\">nartzco</a>";
+			else {
+				if(!isset($opt['backlink']))  echo "&nbsp;<a target=\"_blank\" href=\"http://nartzco.com\">nartzco</a>";
+			}
+			echo "</div>";
 			echo "<div id='kaskusemoticonscontent' style=\"display:none\">";
 			foreach($KEReplace as $k=>$v){
 				if(isset($opt['stat']) && isset($opt['stat'][$k])){}
 				else echo "<a title=\"".$k."\" href=\"javascript:kaskusemoticonsclick('".$k."')\" style=\"cursor:pointer;margin:1px;border:none\">".$v."</a>";
-			}
-			if(isset($opt['backlink']) && $opt['backlink']) echo "<br><a rel=\"follow\" href=\"http://nartzco.com\"><img src=\"http://nartzco.com/blog/wp-content/themes/my/images/bl.png\" alt=\"BY NARTZCO.COM\" border=\"0\"></a>";
-			else {
-				if(!isset($opt['backlink']))  echo "<br><a rel=\"follow\" href=\"http://nartzco.com\"><img src=\"http://nartzco.com/blog/wp-content/themes/my/images/bl.png\" alt=\"BY NARTZCO.COM\" border=\"0\"></a>";
 			}
 			echo "</div>"; 
 		}
