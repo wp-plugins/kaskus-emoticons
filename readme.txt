@@ -3,8 +3,8 @@ Contributors: rehybrid
 Donate link: http://nartzco.com
 Tags: kaskus,emoticon,comment,post,smiley,emoticons,comments,posts,smileys,smilies 
 Requires at least: 2.7.1
-Tested up to: 2.8.6
-Stable tag: 2.4
+Tested up to: 2.9.1
+Stable tag: 3.0.1
 
 Kaskus Emoticons is an emoticon set inspired by Kaskus, the Largest Indonesian Community
 == Description ==
@@ -19,6 +19,14 @@ Kaskus Emoticons is an emoticon set inspired by Kaskus, the Largest Indonesian C
 1. List Emoticon
 
 == Changelog ==
+= 3.0.1 =
+ * bug fixing :)
+= 3.0 =
+ * added button media on page admin for inserting kaskus emoticon
+= 2.5 =
+ * added a new emoticon
+ * bug fixing in Comment Rating plugin 
+ * new feature disable/enable emoticon in settings page kaskus emoticons
 = 2.4 =
  * added a new emoticon, created by pakto and kaskus
 = 2.3 =
