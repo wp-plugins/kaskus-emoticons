@@ -176,7 +176,7 @@ if(!class_exists('KaskusEmoticons')){
 		
 		function add_button(){
 			$pl_dir 	= get_option('siteurl') . '/wp-content/plugins/kaskus-emoticons/';
-	        $wizard_url = $pl_dir . 'kaskus_emoticons_wizard.php';
+	        $wizard_url = $pl_dir . 'kaskus-emoticons-wizard.php';
 	        $button_src = $pl_dir.'kaskus.jpg';
 	        $button_tip = 'Insert a Kaskus Emoticon';
 	        $pl_dir		= ABSPATH . 'wp-content/plugins/kaskus-emoticons/';
