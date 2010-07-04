@@ -1,16 +1,38 @@
 <?php
-$KEEUrl 	= get_option('siteurl') . '/wp-content/plugins/kaskus-emoticons/emoticons/';
+$KEEUrl = get_option('siteurl') . '/wp-content/plugins/kaskus-emoticons/emoticons/';
+$opt 	= get_option('kaskus_emoticons');
+
 $KEReplace	= array(
+
+
+	':mewek' => '<img src="'. $KEEUrl.'mewek.gif" style="border:none;background:none;" alt=":mewek" />',
+	':matabelo' => '<img src="'. $KEEUrl.'matabelo1.gif" style="border:none;background:none;" alt=":matabelo" />',
+	':angel' => '<img src="'. $KEEUrl.'angel1.gif" style="border:none;background:none;" alt=":angel" />',
+	':2thumbup' => '<img src="'. $KEEUrl.'jempol2.gif" style="border:none;background:none;" alt=":2thumbup" />',
+	':thumbup' => '<img src="'. $KEEUrl.'jempol1.gif" style="border:none;background:none;" alt=":thumbup" />',
+	':selamat' => '<img src="'. $KEEUrl.'selamat.gif" style="border:none;background:none;" alt=":selamat" />',
+	':dp' => '<img src="'. $KEEUrl.'dp.gif" style="border:none;background:none;" alt=":dp" />',
+	':cystg' => '<img src="'. $KEEUrl.'cystg.gif" style="border:none;background:none;" alt=":cystg" />',
+	':hoax' => '<img src="'. $KEEUrl.'hoax.gif" style="border:none;background:none;" alt=":hoax" />',
+	':toast' => '<img src="'. $KEEUrl.'toastcendol.gif" style="border:none;background:none;" alt=":toast" />',
+
+
+	':cendol' => '<img src="'. $KEEUrl.'tambahan-kaskuser/cendol.gif" style="border:none;background:none;" alt=":cendol" />',
+
+	':cd' => '<img src="'. $KEEUrl.'capede.gif" style="border:none;background:none;" alt=":cd" />',
+	':hammer' => '<img src="'. $KEEUrl.'hammer.gif" style="border:none;background:none;" alt=":hammer" />',
+	':peluk' => '<img src="'. $KEEUrl.'peluk.gif" style="border:none;background:none;" alt=":peluk" />',
+
 	':malu2' => '<img src="'. $KEEUrl.'tambahan-kaskuser/malu2.gif" style="border:none;background:none;" alt=":malu2" />',
 	':siul' => '<img src="'. $KEEUrl.'tambahan-kaskuser/siul.gif" style="border:none;background:none;" alt=":siul" />',
 	':newyear' => '<img src="'. $KEEUrl.'tambahan-kaskuser/newyear.gif" style="border:none;background:none;" alt=":newyear" />',
 	':alay' => '<img src="'. $KEEUrl.'tambahan-kaskuser/alay.gif" style="border:none;background:none;" alt=":alay" />',
-	':hoax' => '<img src="'. $KEEUrl.'tambahan-kaskuser/hoax.gif" style="border:none;background:none;" alt=":hoax" />',
+	':hoax2' => '<img src="'. $KEEUrl.'tambahan-kaskuser/hoax.gif" style="border:none;background:none;" alt=":hoax2" />',
 	':hope' => '<img src="'. $KEEUrl.'tambahan-kaskuser/hope.gif" style="border:none;background:none;" alt=":hope" />',
 	':hotrit' => '<img src="'. $KEEUrl.'tambahan-kaskuser/hotrit.gif" style="border:none;background:none;" alt=":hotrit" />',
 	':lapar' => '<img src="'. $KEEUrl.'tambahan-kaskuser/lapar.gif" style="border:none;background:none;" alt=":lapar" />',
 	':mahongintip' => '<img src="'. $KEEUrl.'tambahan-kaskuser/mahongintip.gif" style="border:none;background:none;" alt=":mahongintip" />',
-	':mewek' => '<img src="'. $KEEUrl.'tambahan-kaskuser/mewek.gif" style="border:none;background:none;" alt=":mewek" />',
+	':mewek2' => '<img src="'. $KEEUrl.'tambahan-kaskuser/mewek.gif" style="border:none;background:none;" alt=":mewek2" />',
 	':nerd' => '<img src="'. $KEEUrl.'tambahan-kaskuser/nerd.gif" style="border:none;background:none;" alt=":nerd" />',
 	':pertamax' => '<img src="'. $KEEUrl.'tambahan-kaskuser/pertamax.gif" style="border:none;background:none;" alt=":pertamax" />',
 	':rate' => '<img src="'. $KEEUrl.'tambahan-kaskuser/rate.gif" style="border:none;background:none;" alt=":rate" />',
@@ -41,10 +63,6 @@ $KEReplace	= array(
 	':sup2:' => '<img src="'. $KEEUrl.'sundul.gif" style="border:none;background:none;" alt=":sup2:" />',
 	':cendolbig' => '<img src="'. $KEEUrl.'s_big_cendol.gif" style="border:none;background:none;" alt=":cendolbig" />',
 	':batabig' => '<img src="'. $KEEUrl.'s_big_batamerah.gif" style="border:none;background:none;" alt=":batabig" />',
-	':cendolb' => '<img src="'. $KEEUrl.'s_sm_cendol.gif" style="border:none;background:none;" alt=":cendolb" />',
-	':bata' => '<img src="'. $KEEUrl.'s_sm_batamerah.gif" style="border:none;background:none;" alt=":bata" />',
-	':)b' => '<img src="'. $KEEUrl.'s_sm_smile.gif" style="border:none;background:none;" alt=":)b" />',
-	':Yb' => '<img src="'. $KEEUrl.'s_sm_peace.gif" style="border:none;background:none;" alt=":Yb" />',
 	':jrb:' => '<img src="'. $KEEUrl.'fd_1.gif" style="border:none;background:none;" alt=":jrb:" />',
 	':kts:' => '<img src="'. $KEEUrl.'fd_6.gif" style="border:none;background:none;" alt=":kts:" />',
 	':sup:' => '<img src="'. $KEEUrl.'fd_5.gif" style="border:none;background:none;" alt=":sup:" />',
@@ -53,6 +71,32 @@ $KEReplace	= array(
 	':bigo:' => '<img src="'. $KEEUrl.'fd_3.gif" style="border:none;background:none;" alt=":bigo:" />',
 	':repost:' => '<img src="'. $KEEUrl.'fd_7.gif" style="border:none;background:none;" alt=":repost:" />',
 	':cd:' => '<img src="'. $KEEUrl.'fd_2.gif" style="border:none;background:none;" alt=":cd:" />',
+
+
+	//small	
+	':bata' => '<img src="'. $KEEUrl.'s_sm_batamerah.gif" style="border:none;background:none;" alt=":bata" />',
+	':Yb' => '<img src="'. $KEEUrl.'s_sm_peace.gif" style="border:none;background:none;" alt=":Yb" />',
+	':batas' => '<img src="'. $KEEUrl.'batas.gif" style="border:none;background:none;" alt=":batas" />',
+	':cekpms' => '<img src="'. $KEEUrl.'cekpms.gif" style="border:none;background:none;" alt=":cekpms" />',
+	':capedes' => '<img src="'. $KEEUrl.'capedes.gif" style="border:none;background:none;" alt=":capedes" />',
+	':mahos' => '<img src="'. $KEEUrl.'mahos.gif" style="border:none;background:none;" alt=":mahos" />',
+	':malus' => '<img src="'. $KEEUrl.'malus.gif" style="border:none;background:none;" alt=":malus" />',
+	':kisss' => '<img src="'. $KEEUrl.'kisss.gif" style="border:none;background:none;" alt=":kisss" />',
+	':ngakaks' => '<img src="'. $KEEUrl.'ngakaks.gif" style="border:none;background:none;" alt=":ngakaks" />',
+	':takuts' => '<img src="'. $KEEUrl.'takuts.gif" style="border:none;background:none;" alt=":takuts" />',
+	':reposts' => '<img src="'. $KEEUrl.'reposts.gif" style="border:none;background:none;" alt=":reposts" />',
+	':hammers' => '<img src="'. $KEEUrl.'hammers.gif" style="border:none;background:none;" alt=":hammers" />',
+	':sundulgans' => '<img src="'. $KEEUrl.'sundulgans.gif" style="border:none;background:none;" alt=":sundulgans" />',
+	':mads' => '<img src="'. $KEEUrl.'mads.gif" style="border:none;background:none;" alt=":mads" />',
+	':ilovekaskuss' => '<img src="'. $KEEUrl.'iluvkaskuss.gif" style="border:none;background:none;" alt=":ilovekaskuss" />',
+	':najiss' => '<img src="'. $KEEUrl.'najiss.gif" style="border:none;background:none;" alt=":najiss" />',
+	':berdukas' => '<img src="'. $KEEUrl.'berdukas.gif" style="border:none;background:none;" alt=":berdukas" />',
+	':iloveindonesias' => '<img src="'. $KEEUrl.'iloveindonesias.gif" style="border:none;background:none;" alt=":iloveindonesias" />',
+	':cendols' => '<img src="'. $KEEUrl.'cendols.gif" style="border:none;background:none;" alt=":cendols" />',
+	':)b' => '<img src="'. $KEEUrl.'s_sm_smile.gif" style="border:none;background:none;" alt=":)b" />',
+	':cendolb' => '<img src="'. $KEEUrl.'s_sm_cendol.gif" style="border:none;background:none;" alt=":cendolb" />',
+
+
 	':berbusa:' => '<img src="'. $KEEUrl.'q20.gif" style="border:none;background:none;" alt=":berbusa:" />',
 	':breakhear' => '<img src="'. $KEEUrl.'38.gif" style="border:none;background:none;" alt=":breakhear" />',
 	':babi:' => '<img src="'. $KEEUrl.'27.gif" style="border:none;background:none;" alt=":babi:" />',
@@ -131,4 +175,10 @@ $KEReplace	= array(
 	':shakehand' => '<img src="'. $KEEUrl.'49.gif" style="border:none;background:none;" alt=":shakehand" />',
 	':bingung:' => '<img src="'. $KEEUrl.'bolakbalik.gif" style="border:none;background:none;" alt=":bingung:" />'         
 );
+$KEReplace2 = $KEReplace;
+if(isset($opt['stat'])){
+	foreach($opt['stat'] as $k=>$v){
+		$KEReplace[$k]="";
+	}
+}
 ?>
