@@ -11,9 +11,9 @@ body{
 </head>
 <body>
 <?php
-$httphost = @$_SERVER ['HTTP_HOST'];
-$httpreferer = @$_SERVER ['HTTP_REFERER'];
-$nonce = $_POST ['nonce'];
+$httphost = @$_SERVER['HTTP_HOST'];
+$httpreferer = @$_SERVER['HTTP_REFERER'];
+$nonce = isset($_POST['nonce'])?$_POST['nonce']:"";
 require_once '../../../wp-config.php';
 include("kaskus-emoticons-list.php");
 //print_r($KEEUrl);die;

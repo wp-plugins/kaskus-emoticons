@@ -3,7 +3,7 @@
 Plugin Name: Kaskus Emoticons
 Plugin URI: http://nartzco.com/blog/2009/10/23/kaskus-emoticons/
 Description: Kaskus Emoticons is an emoticon set inspired by Kaskus, the Largest Indonesian Community - consisting of over a million active members from all over the world. The images which are used in this plugin are copyright of Kaskus
-Version: 3.0.1
+Version: 3.1.0
 Author: Rehybrid
 Author URI: http://nartzco.com/
 
@@ -45,11 +45,13 @@ if(!class_exists('KaskusEmoticons')){
 	      		add_option('kaskus_emoticons', $data);
 	    	} else {
 	      		update_option('kaskus_emoticons', $data);
-	    	}		
+	    	}
+	    	header("location:./options-general.php?page=KaskusEmoticons");		
+	    	die;
 		}
 		
 		function deactivate(){
-			delete_option('kaskus_emoticons');
+			//delete_option('kaskus_emoticons');
 		}
 
 		function link( $links, $file ){
@@ -91,6 +93,9 @@ if(!class_exists('KaskusEmoticons')){
 			}
 			
 			$backlink= htmlspecialchars($options['backlink'], ENT_QUOTES);
+			$check = get_option('siteurl') . '/wp-content/plugins/kaskus-emoticons/checkbox';
+			$check0= $check."0.gif";
+			$check1= $check."1.gif";
 ?>
 			<style type="text/css">
 			.codelist{
@@ -101,10 +106,34 @@ if(!class_exists('KaskusEmoticons')){
 				vertical-align: middle;
 				padding: 2px;
 			}
+			
+			.code-row{
+				background: none;
+				cursor: pointer;
+			}
+
+			.code-row-checked{
+				background: #dfdfdf;
+			}
+
+			.code-row-hover{
+				background: white;
+			}
+			
+			.code-check0{
+				background:url("<?php echo $check0;?>") no-repeat scroll center center transparent;
+			}
+
+			.code-check1{
+				background:url("<?php echo $check1;?>") no-repeat scroll center center transparent;
+			}
 			</style>
+			<img src="<?php echo $check0;?>" style="display:none">
+			<img src="<?php echo $check1;?>" style="display:none">
 			<h2>KASKUS EMOTICONS</h2>
-			<em>WordPress plugin written by <a href="http://nartzco.com">Rehybrid</a> </em><br /><br />
-			If you are member of kaskus with ISO2000, please give <a href="http://www.kaskus.us/member.php?u=454780">me</a> a big cendol dunk...<img src="<?php echo $KEEUrl."tambahan-kaskuser/cendol.gif";?>"><br /><br />
+			<em>WordPress plugin written by <a href="http://nartzco.com" target="_blank">Rehybrid</a> </em><br /><br />
+			If you are member of kaskus with ISO2000, please give <a href="http://www.kaskus.us/member.php?u=454780" target="_blank">me</a> a big cendol dunk...<img src="<?php echo $KEEUrl."tambahan-kaskuser/cendol.gif";?>"><br />
+			follow me for the latest update and another info - <a href="http://twitter.com/nartzco" target="_blank">twitter.com/nartzco</a> <br /><br />
 			<form method="post" action="options-general.php?page=KaskusEmoticons">
 			<table>
 			<tr>
@@ -119,14 +148,17 @@ if(!class_exists('KaskusEmoticons')){
 			<tr>
 				<td colspan="2">
 					<table class="codelist" align="center" cellpadding="0" cellspacing="0" border="0">
-					<tr>
+					<tr style="background:#ccc;">
 						<td align="center"><strong>Disable ?</strong></td>
 						<td align="center"><strong>Image</strong></td>
 						<td align="center"><strong>Code</strong></td>
 					</tr>
-					<?php foreach($KEReplace2 as $k=>$v):?>
-					<tr>
-						<td align="center"><input <?php echo (isset($options['stat']) && isset($options['stat'][$k]) ? "checked=\"checked\"":"");?> name="kaskus_emoticons_stat[<?php echo $k;?>]" type="checkbox"></td>
+					<?php 
+					foreach($KEReplace2 as $k=>$v):
+						$xstat = isset($options['stat']) && isset($options['stat'][$k]);
+					?>
+					<tr class="code-row<?php echo ($xstat?" code-row-checked":"");?>">
+						<td align="center" class="code-check<?php echo ($xstat?1:0);?>"><input <?php echo ($xstat ? "checked=\"checked\"":"");?> name="kaskus_emoticons_stat[<?php echo $k;?>]" type="checkbox" style="display:none"></td>
 						<td align="center"><?php echo $v;?></td>
 						<td><?php echo $k;?></td>
 					</tr>
@@ -138,6 +170,25 @@ if(!class_exists('KaskusEmoticons')){
 			<input type="hidden" id="kaskus_emoticons_action" name="kaskus_emoticons_action" value="1" /><br />
 			<input type="submit" id="kaskus_emoticons_submit" name="kaskus_emoticons_submit" value="Save Settings" />
 			</form>
+			<script language="javascript">
+			jQuery(".code-row").each(function(i){
+				jQuery(this).mouseover(function(){
+					jQuery(this).addClass("code-row-hover");
+				}).mouseout(function(){
+					jQuery(this).removeClass("code-row-hover");
+				}).click(function(){
+					if((jQuery(this).find(":checkbox")[0]).checked){
+						(jQuery(this).find("td")[0]).className = "code-check0";
+						jQuery(this).removeClass("code-row-checked");
+					}
+					else{
+						jQuery(this).addClass("code-row-checked");
+						(jQuery(this).find("td")[0]).className = "code-check1";
+					}
+					(jQuery(this).find(":checkbox")[0]).checked = !(jQuery(this).find(":checkbox")[0]).checked;
+				});
+			});
+			</script>
 <?php
 		}
 
@@ -210,7 +261,6 @@ if(!class_exists('KaskusEmoticons')){
 	var kaskusemoticonsclick = function(tag){
 		var d = gOI("comment");
 		var b = d.selectionStart, a = d.selectionEnd;
-		//d.value = d.value.substring(0, b) + " " + tag + " " + d.value.substring(a, d.value.length);
 		d.value = d.value.substring(0, b) + " " + tag + " " + d.value.substring(a, d.value.length);
 	};
 	
