@@ -3,7 +3,7 @@
 Plugin Name: Kaskus Emoticons
 Plugin URI: http://nartzco.com/blog/2009/10/23/kaskus-emoticons/
 Description: Kaskus Emoticons is an emoticon set inspired by Kaskus, the Largest Indonesian Community - consisting of over a million active members from all over the world. The images which are used in this plugin are copyright of Kaskus
-Version: 3.1.0
+Version: 3.1.1
 Author: Rehybrid
 Author URI: http://nartzco.com/
 
