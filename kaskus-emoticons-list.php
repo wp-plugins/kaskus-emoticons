@@ -3,6 +3,14 @@ $KEEUrl = get_option('siteurl') . '/wp-content/plugins/kaskus-emoticons/emoticon
 $opt 	= get_option('kaskus_emoticons');
 
 $KEReplace	= array(
+	':nohope' => '<img src="'. $KEEUrl.'nohope.gif" style="border:none;background:none;" alt=":nohope" />',
+	':travel' => '<img src="'. $KEEUrl.'traveller.gif" style="border:none;background:none;" alt=":travel" />',
+	':kr' => '<img src="'. $KEEUrl.'kaskus_radio.gif" style="border:none;background:none;" alt=":kr" />',
+	':sorry' => '<img src="'. $KEEUrl.'sorry.gif" style="border:none;background:none;" alt=":sorry" />',
+	':babygirl' => '<img src="'. $KEEUrl.'babygirl.gif" style="border:none;background:none;" alt=":babygirl" />',
+	':babyboy1' => '<img src="'. $KEEUrl.'babyboy1.gif" style="border:none;background:none;" alt=":babyboy1" />',
+	':babyboy' => '<img src="'. $KEEUrl.'babyboy.gif" style="border:none;background:none;" alt=":babyboy" />',
+	':request' => '<img src="'. $KEEUrl.'request.gif" style="border:none;background:none;" alt=":request" />',
 
 
 	':mewek' => '<img src="'. $KEEUrl.'mewek.gif" style="border:none;background:none;" alt=":mewek" />',

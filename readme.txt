@@ -3,8 +3,8 @@ Contributors: rehybrid
 Donate link: http://nartzco.com
 Tags: kaskus,emoticon,comment,post,smiley,emoticons,comments,posts,smileys,smilies 
 Requires at least: 2.7.1
-Tested up to: 3.0
-Stable tag: 3.1.0
+Tested up to: 3.0.2
+Stable tag: 3.1.1
 
 Kaskus Emoticons is an emoticon set inspired by Kaskus, the Largest Indonesian Community
 == Description ==
@@ -19,6 +19,9 @@ Kaskus Emoticons is an emoticon set inspired by Kaskus, the Largest Indonesian C
 1. List Emoticon
 
 == Changelog ==
+= 3.1.1 =
+ * added a new emoticon
+ * bug fixing WP 3.0.2 - "You do not have sufficient permissions to access this page."
 = 3.1.0 =
  * added a new emoticon
  * support wp 3.0

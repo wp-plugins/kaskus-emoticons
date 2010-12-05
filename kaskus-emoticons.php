@@ -46,8 +46,6 @@ if(!class_exists('KaskusEmoticons')){
 	    	} else {
 	      		update_option('kaskus_emoticons', $data);
 	    	}
-	    	header("location:./options-general.php?page=KaskusEmoticons");		
-	    	die;
 		}
 		
 		function deactivate(){
