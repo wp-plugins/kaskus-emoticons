@@ -19,7 +19,7 @@ Kaskus Emoticons is an emoticon set inspired by Kaskus, the Largest Indonesian C
 1. List Emoticon
 
 == Changelog ==
-= 3.1.2 =
+= 3.1.3 =
  * added a new emoticon
  * support wp 3.5
 = 3.1.2 =
