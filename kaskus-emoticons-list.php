@@ -3,6 +3,21 @@ $KEEUrl = get_option('siteurl') . '/wp-content/plugins/kaskus-emoticons/emoticon
 $opt 	= get_option('kaskus_emoticons');
 
 $KEReplace	= array(
+	':ultah' => '<img src="'. $KEEUrl.'ultah.gif" style="border:none;background:none;" alt=":ultah" />',
+	':kimpoi' => '<img src="'. $KEEUrl.'kimpoi.gif" style="border:none;background:none;" alt=":kimpoi" />',
+	':bola' => '<img src="'. $KEEUrl.'bola.gif" style="border:none;background:none;" alt=":bola" />',
+	':bedug' => '<img src="'. $KEEUrl.'lebaran02.gif" style="border:none;background:none;" alt=":bedug" />',
+	':cool' => '<img src="'. $KEEUrl.'cool2.gif" style="border:none;background:none;" alt=":cool" />',
+	':games' => '<img src="'. $KEEUrl.'games.gif" style="border:none;background:none;" alt=":games" />',
+	':hn' => '<img src="'. $KEEUrl.'hotnews.gif" style="border:none;background:none;" alt=":hn" />',
+	':ketupat' => '<img src="'. $KEEUrl.'lebaran02.gif" style="border:none;background:none;" alt=":ketupat" />',
+	':maafagan' => '<img src="'. $KEEUrl.'lebaran01.gif" style="border:none;background:none;" alt=":maafagan" />',
+	':maafaganwati' => '<img src="'. $KEEUrl.'lebaran04.gif" style="border:none;background:none;" alt=":maafaganwati" />',
+	':salaman' => '<img src="'. $KEEUrl.'lebaran03.gif" style="border:none;background:none;" alt=":salaman" />',
+	':salahkamar' => '<img src="'. $KEEUrl.'salah_kamar.gif" style="border:none;background:none;" alt=":salahkamar" />',
+
+
+
 	':nohope' => '<img src="'. $KEEUrl.'nohope.gif" style="border:none;background:none;" alt=":nohope" />',
 	':travel' => '<img src="'. $KEEUrl.'traveller.gif" style="border:none;background:none;" alt=":travel" />',
 	':kr' => '<img src="'. $KEEUrl.'kaskus_radio.gif" style="border:none;background:none;" alt=":kr" />',

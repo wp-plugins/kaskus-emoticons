@@ -1,13 +1,13 @@
 <?php
 /*
 Plugin Name: Kaskus Emoticons
-Plugin URI: http://nartzco.com/blog/2009/10/23/kaskus-emoticons/
+Plugin URI: http://nartzco.com
 Description: Kaskus Emoticons is an emoticon set inspired by Kaskus, the Largest Indonesian Community - consisting of over a million active members from all over the world. The images which are used in this plugin are copyright of Kaskus
-Version: 3.1.2
-Author: Rehybrid
-Author URI: http://nartzco.com/
+Version: 3.1.3
+Author: nartzco
+Author URI: http://nartzco.com
 
-Copyright 2009, nartzco.com
+Copyright 2009-2012, nartzco.com
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
